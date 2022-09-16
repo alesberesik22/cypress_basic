@@ -27,11 +27,10 @@ describe('Home page', () => {
     cy.visit('https://codedamn.com/')
     cy.get('[href="/login"]').click()
   })
-    it("Google test", () => {
+    it.only("Google test", () => {
     cy.viewport(1920,1080)
       cy.visit('https://www.google.sk/')
-    //   cy.get('#W0wltc > .QS5gu').click()
-      cy.get('[id="W0wltc"]').click()
+      cy.get('button').contains('Odmietnuť všetko').click()
       cy.get('[name="q"]').type("nieco{enter}")
     // cy.get('[title="Hľadať"]').type("nieco{enter}")
   })
