@@ -31,3 +31,6 @@ jobs:
         with: 
           record: true
           start: npm run cypress:open --record --spec "cypress/e2e/home.cy.ts"
+        env:
+          CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
