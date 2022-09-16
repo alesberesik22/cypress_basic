@@ -30,7 +30,9 @@ describe('Home page', () => {
     it("Google test", () => {
     cy.viewport(1920,1080)
       cy.visit('https://www.google.sk/')
-      cy.get('#W0wltc > .QS5gu').click()
-    cy.get('[title="Hľadať"]').type("nieco{enter}")
+    //   cy.get('#W0wltc > .QS5gu').click()
+      cy.get('[id="W0wltc"]').click()
+      cy.get('[name="q"]').type("nieco{enter}")
+    // cy.get('[title="Hľadať"]').type("nieco{enter}")
   })
 })
