@@ -27,7 +27,7 @@ describe('Home page', () => {
     cy.visit('https://codedamn.com/')
     cy.get('[href="/login"]').click()
   })
-    it.only("Google test", () => {
+    it("Google test", () => {
     cy.viewport(1920,1080)
       cy.visit('https://www.google.sk/')
      // cy.get('button').contains('Odmietnuť všetko').click()
